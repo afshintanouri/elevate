@@ -1,0 +1,6 @@
+{
+  "name": "Elevate 2026 - AI & Workforce Capability Workshop",
+  "description": "Futuristic waiting and interactive activity portal for Dr Afshin Tanouri's session at the 2026 Elevate Educator Symposium.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
