@@ -14,8 +14,13 @@ interface TimeRemaining {
 const WORKSHOP_URL = 'https://afshintanouri.github.io/elevate-workshop/';
 
 export function CountdownClock() {
-  // Target: November 13, 2026 at 11:00 AM (Adelaide Time / ACDT +10:30)
+  // Secret Test Mode: Add ?test=true to the URL to test a 5-second countdown!
+  // Otherwise, locks to November 13, 2026 at 11:00 AM (Adelaide Time / ACDT +10:30)
   const targetDate = useMemo(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('test') === 'true') {
+      return new Date(Date.now() + 5000); // 5 seconds from page load
+    }
     return new Date('2026-11-13T11:00:00+10:30');
   }, []);
 
